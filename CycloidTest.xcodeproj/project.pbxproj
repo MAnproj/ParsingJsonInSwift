@@ -3,16 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26338FA4968F81DB397E0644 /* Pods_CycloidTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D893B9ED7947006EBC822D21 /* Pods_CycloidTest.framework */; };
 		284BC372243CE7E00015F254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284BC371243CE7E00015F254 /* AppDelegate.swift */; };
 		284BC374243CE7E00015F254 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284BC373243CE7E00015F254 /* SceneDelegate.swift */; };
 		284BC376243CE7E00015F254 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284BC375243CE7E00015F254 /* ViewController.swift */; };
 		284BC379243CE7E00015F254 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284BC377243CE7E00015F254 /* Main.storyboard */; };
 		284BC37B243CE7E20015F254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284BC37A243CE7E20015F254 /* Assets.xcassets */; };
 		284BC37E243CE7E20015F254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284BC37C243CE7E20015F254 /* LaunchScreen.storyboard */; };
+		284BC389243CEA460015F254 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284BC388243CEA460015F254 /* TableViewCell.swift */; };
+		284BC38B243CEA900015F254 /* Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284BC38A243CEA900015F254 /* Facts.swift */; };
+		28AFCA48243CF2AA0084C78F /* facts.json in Resources */ = {isa = PBXBuildFile; fileRef = 28AFCA47243CF2AA0084C78F /* facts.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,12 @@
 		284BC37A243CE7E20015F254 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		284BC37D243CE7E20015F254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		284BC37F243CE7E20015F254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284BC388243CEA460015F254 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		284BC38A243CEA900015F254 /* Facts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facts.swift; sourceTree = "<group>"; };
+		28AFCA47243CF2AA0084C78F /* facts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = facts.json; sourceTree = "<group>"; };
+		840DC5CFEA48363B38E9D195 /* Pods-CycloidTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CycloidTest.release.xcconfig"; path = "Target Support Files/Pods-CycloidTest/Pods-CycloidTest.release.xcconfig"; sourceTree = "<group>"; };
+		BCF75A343425FBFF6A94CD08 /* Pods-CycloidTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CycloidTest.debug.xcconfig"; path = "Target Support Files/Pods-CycloidTest/Pods-CycloidTest.debug.xcconfig"; sourceTree = "<group>"; };
+		D893B9ED7947006EBC822D21 /* Pods_CycloidTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CycloidTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26338FA4968F81DB397E0644 /* Pods_CycloidTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		008EE21EB323C9E748B14CFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCF75A343425FBFF6A94CD08 /* Pods-CycloidTest.debug.xcconfig */,
+				840DC5CFEA48363B38E9D195 /* Pods-CycloidTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		284BC365243CE7E00015F254 = {
 			isa = PBXGroup;
 			children = (
 				284BC370243CE7E00015F254 /* CycloidTest */,
 				284BC36F243CE7E00015F254 /* Products */,
+				008EE21EB323C9E748B14CFF /* Pods */,
+				76EFD3F8D0FDE168E3AFF0E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +78,50 @@
 		284BC370243CE7E00015F254 /* CycloidTest */ = {
 			isa = PBXGroup;
 			children = (
+				284BC387243CE8650015F254 /* View */,
+				284BC386243CE85B0015F254 /* Model */,
+				284BC385243CE83C0015F254 /* Controller */,
 				284BC371243CE7E00015F254 /* AppDelegate.swift */,
 				284BC373243CE7E00015F254 /* SceneDelegate.swift */,
-				284BC375243CE7E00015F254 /* ViewController.swift */,
 				284BC377243CE7E00015F254 /* Main.storyboard */,
 				284BC37A243CE7E20015F254 /* Assets.xcassets */,
 				284BC37C243CE7E20015F254 /* LaunchScreen.storyboard */,
 				284BC37F243CE7E20015F254 /* Info.plist */,
+				28AFCA47243CF2AA0084C78F /* facts.json */,
 			);
 			path = CycloidTest;
+			sourceTree = "<group>";
+		};
+		284BC385243CE83C0015F254 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				284BC375243CE7E00015F254 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		284BC386243CE85B0015F254 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				284BC38A243CEA900015F254 /* Facts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		284BC387243CE8650015F254 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				284BC388243CEA460015F254 /* TableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76EFD3F8D0FDE168E3AFF0E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D893B9ED7947006EBC822D21 /* Pods_CycloidTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 284BC382243CE7E20015F254 /* Build configuration list for PBXNativeTarget "CycloidTest" */;
 			buildPhases = (
+				D03F2659640DE50DD17F5A17 /* [CP] Check Pods Manifest.lock */,
 				284BC36A243CE7E00015F254 /* Sources */,
 				284BC36B243CE7E00015F254 /* Frameworks */,
 				284BC36C243CE7E00015F254 /* Resources */,
+				5157760500FF0ABEE05227B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,10 +187,53 @@
 				284BC37E243CE7E20015F254 /* LaunchScreen.storyboard in Resources */,
 				284BC37B243CE7E20015F254 /* Assets.xcassets in Resources */,
 				284BC379243CE7E00015F254 /* Main.storyboard in Resources */,
+				28AFCA48243CF2AA0084C78F /* facts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5157760500FF0ABEE05227B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CycloidTest/Pods-CycloidTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CycloidTest/Pods-CycloidTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CycloidTest/Pods-CycloidTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D03F2659640DE50DD17F5A17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CycloidTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		284BC36A243CE7E00015F254 /* Sources */ = {
@@ -139,6 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				284BC376243CE7E00015F254 /* ViewController.swift in Sources */,
+				284BC38B243CEA900015F254 /* Facts.swift in Sources */,
+				284BC389243CEA460015F254 /* TableViewCell.swift in Sources */,
 				284BC372243CE7E00015F254 /* AppDelegate.swift in Sources */,
 				284BC374243CE7E00015F254 /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +386,7 @@
 		};
 		284BC383243CE7E20015F254 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCF75A343425FBFF6A94CD08 /* Pods-CycloidTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +405,7 @@
 		};
 		284BC384243CE7E20015F254 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 840DC5CFEA48363B38E9D195 /* Pods-CycloidTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
